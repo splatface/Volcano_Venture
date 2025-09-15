@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class dragon : MonoBehaviour
 {
-    public float speed = 5;
+    public float speed = 5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,8 +18,8 @@ public class dragon : MonoBehaviour
 
         Vector2 pos = transform.position;
 
-        pos.x += h * Time.deltaTime;
-        pos.y += v * Time.deltaTime;
+        pos.x += h * speed * Time.deltaTime;
+        pos.y += v * speed * Time.deltaTime;
 
         transform.position = pos;
     }
